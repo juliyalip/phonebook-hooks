@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  margin-left: auto;
+}
+
+.button {
+  display: block;
+}
+
+.avatar {
+  margin-left: 10px;
+  margin-right: 10px;
+}

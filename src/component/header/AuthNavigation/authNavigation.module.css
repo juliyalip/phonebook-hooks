@@ -1,0 +1,11 @@
+.authLink {
+  vertical-align: middle;
+}
+
+.authLink:not(:last-child) {
+  margin-right: 10px;
+}
+
+.container {
+  margin-left: auto;
+}

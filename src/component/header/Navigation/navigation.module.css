@@ -1,0 +1,12 @@
+.navList {
+  padding-left: 0;
+  display: flex;
+}
+
+.navItem {
+  list-style: none;
+}
+
+.navItem:not(:last-child) {
+  margin-right: 15px;
+}
