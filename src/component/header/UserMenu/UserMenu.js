@@ -22,8 +22,8 @@ export default function UserMenu() {
     return (
         <div className={s.container}>
             
-            <p>Wellcome, {name} </p>
-            <img className={s.avatar} src={avatar} alt={name} width="32" />
+            <span>Wellcome, {name} </span>
+            <img className={s.avatar} src={avatar} alt={name} width="42px" />
             <button type="button"
             className={s.button}   onClick={onLogaut}>logout</button>
   </div>

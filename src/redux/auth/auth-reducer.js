@@ -32,11 +32,12 @@ const tokenReduser = createReducer(null,
     // абстракция для переиспользования
 const setError =  (_, { payload }) => payload
 
-const errorRegisterReduser = createReducer(null, {
+const errorReduser = createReducer(null, {
    [ registerUserError]: setError,
     [onLoginError]: setError,
     [logAuthActionError]: setError,
-    [currentUserError]: setError
+    [currentUserError]: setError,
+    [logAuthActionError]: setError
 }) 
 
 
@@ -44,7 +45,7 @@ export const authRootReducer = combineReducers({
   
   user: userReduser,
     token: tokenReduser,
-    error: errorRegisterReduser
+    error: errorReduser
   
     
     }

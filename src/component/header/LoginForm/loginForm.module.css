@@ -3,7 +3,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 15px;
-  background-color: #4caf50;
+  background-color: var(--primery-color);
   color: white;
   border-radius: 4px;
 }
@@ -19,6 +19,7 @@
   margin-right: auto;
   text-align: center;
   border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .label {

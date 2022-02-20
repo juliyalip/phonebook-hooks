@@ -67,3 +67,29 @@ export const logautOperation = () => async dispatch => {
         dispatch(logAuthActionError(err.message))
     }
 };
+
+
+////////////////////////////////////
+export const getCurrentUser = () => async( dispatch, getState) => {
+    //делаем деструктуризацию state.auth.token и переименование на - persistToken
+    const { auth: { token: persistToken } } = getState();
+    if (!persistToken) {
+        console.log('tokena net - go aut')
+        return
+    }
+    token.set(persistToken);
+    
+
+    dispatch(currentUserRequest());
+    try {
+        const response = await Axios.get('/users/current');
+        dispatch(currentUserSuccess(response.data))
+    } catch (error) {
+        dispatch(currentUserError(error.message))
+        
+    }
+}
+
+// параметр getState используется редко - в кешировании и для такого запроса
+// при обработке редюсера userReduser при экшене currentUserSuccess
+// - в пейлоад прийдет наш юзер, токен ничего не делаем, так как он валидный остался

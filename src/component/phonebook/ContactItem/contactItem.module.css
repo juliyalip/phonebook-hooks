@@ -1,0 +1,25 @@
+.item {
+  display: flex;
+  width: 350px;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.contactBlock {
+  display: flex;
+  width: 250px;
+
+  justify-content: space-between;
+}
+
+.button {
+  background-color: var(--primery-color);
+  color: white;
+  padding: 7px 15px;
+  border-radius: 4px;
+}
+.button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
